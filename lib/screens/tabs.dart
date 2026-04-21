@@ -5,7 +5,6 @@ import 'meals.dart';
 import '../widgets/main_drawer.dart';
 import 'filters.dart';
 
-
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
 
