@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'tabs.dart';
 // import '../widgets/main_drawer.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:meals/providers/filters_provider.dart';
+import '../providers/filters_provider.dart';
 
 class FiltersScreen extends ConsumerWidget {
   const FiltersScreen({super.key});
@@ -12,7 +12,9 @@ class FiltersScreen extends ConsumerWidget {
     final activeFilters = ref.watch(filtersProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Your Filters')),
+      appBar: AppBar(
+        title: const Text('Your Filters'),
+      ),
       body: Column(
         children: [
           SwitchListTile(
@@ -25,14 +27,14 @@ class FiltersScreen extends ConsumerWidget {
             title: Text(
               'Gluten-free',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             subtitle: Text(
               'Only include gluten-free meals.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
@@ -47,14 +49,14 @@ class FiltersScreen extends ConsumerWidget {
             title: Text(
               'Lactose-free',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             subtitle: Text(
               'Only include lactose-free meals.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
@@ -69,14 +71,14 @@ class FiltersScreen extends ConsumerWidget {
             title: Text(
               'Vegetarian',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             subtitle: Text(
               'Only include vegetarian meals.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
@@ -91,14 +93,14 @@ class FiltersScreen extends ConsumerWidget {
             title: Text(
               'Vegan',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             subtitle: Text(
               'Only include vegan meals.',
               style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
-              ),
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
